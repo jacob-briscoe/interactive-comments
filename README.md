@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://jacob-briscoe.github.io/interactive-comments/comments/juliusomo](https://jacob-briscoe.github.io/interactive-comments/comments/juliusomo)
+- Live Site URL: [https://jacob-briscoe.github.io/interactive-comments/](https://jacob-briscoe.github.io/interactive-comments/)
 
 ## My process
 
