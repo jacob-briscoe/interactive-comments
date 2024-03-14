@@ -1,0 +1,28 @@
+<app-comment-container>
+  <form (ngSubmit)="onSubmit()" [formGroup]="formGroup">
+    <div
+      class="grid grid-cols-2 grid-flow-row-dense gap-4 sm:grid-cols-12 sm:gap-4"
+    >
+      <app-avatar
+        size="large"
+        [picture]="user | userPicture"
+        class="order-2 self-center sm:self-start sm:order-none sm:col-span-1 sm:justify-self-center"
+      ></app-avatar>
+      <textarea
+        formControlName="comment"
+        appTextarea
+        placeholder="Add a comment..."
+        rows="5"
+        class="order-1 col-span-2 sm:order-none sm:col-span-9"
+      ></textarea>
+      <button
+        type="submit"
+        [disabled]="formGroup.invalid"
+        appFlatButton
+        class="order-3 h-fit justify-self-end sm:order-none sm:col-span-2 sm:justify-self-center"
+      >
+        {{ isReply ? "Reply" : "Send" }}
+      </button>
+    </div>
+  </form>
+</app-comment-container>

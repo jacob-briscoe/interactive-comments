@@ -1,0 +1,19 @@
+<div
+  class="flex flex-row sm:flex-col items-center justify-between gap-2 rounded-lg sm:w-8 w-24 sm:h-24 h-8 sm:py-3 py-2 sm:px-2 px-3 bg-light-gray"
+>
+  <button
+    appIconButton
+    icon="plus"
+    class="hover:opacity-100"
+    (click)="onUpvote()"
+    [disabled]="!canUpVote"
+  ></button>
+  <label class="text-moderate-blue font-medium">{{ voteCount }}</label>
+  <button
+    appIconButton
+    icon="minus"
+    class="hover:opacity-100"
+    (click)="onDownVote()"
+    [disabled]="!canDownVote"
+  ></button>
+</div>

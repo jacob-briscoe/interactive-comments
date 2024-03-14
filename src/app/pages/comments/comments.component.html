@@ -1,0 +1,67 @@
+@if (vm$ | async; as vm) {
+  <div class="flex flex-col gap-5">
+    @if (!vm.loadingComments) {
+      @for (comment of vm.comments; track comment.id) {
+        <app-comment
+          [comment]="comment"
+          [myComment]="comment.user.username === vm.user.username"
+          [isEditing]="
+            vm.editing.isEditing &&
+            vm.editing.commentId === comment.id &&
+            !vm.editing.replyId
+          "
+          (upVote)="onUpvote($event)"
+          (downVote)="onDownvote($event)"
+          (reply)="onReplyComment($event)"
+          (delete)="onDeleteComment($event)"
+          (update)="onUpdateComment($event)"
+          (edit)="onEditComment($event)"
+        />
+        @if (comment.replies.length) {
+          <div class="flex flex-row">
+            <div class="w-9 sm:w-[90px] flex sm:justify-center">
+              <hr
+                class="h-full w-[2px] bg-light-gray dark:bg-dark-blue border-0"
+              />
+            </div>
+            <div class="flex flex-col gap-5">
+              @for (reply of comment.replies; track reply.id) {
+                <app-comment
+                  [comment]="reply"
+                  [myComment]="reply.user.username === vm.user.username"
+                  [isEditing]="
+                    vm.editing.isEditing &&
+                    vm.editing.commentId === comment.id &&
+                    vm.editing.replyId === reply.id
+                  "
+                  (upVote)="onReplyUpvote(comment.id, $event)"
+                  (downVote)="onReplyDownvote(comment.id, $event)"
+                  (update)="onUpdateReplyComment($event)"
+                  (edit)="onEditComment($event)"
+                  (deleteReply)="onDeleteReplyComment($event)"
+                  (reply)="onReplyComment($event)"
+                />
+              }
+            </div>
+          </div>
+        }
+      }
+      <app-new-comment
+        [user]="vm.user"
+        (submitComment)="onSubmitComment($event)"
+      />
+    } @else {
+      <!-- TODOJ: finish/polish -->
+      @for (
+        item of placeholderComments;
+        track $index;
+        let even = $even;
+        let odd = $odd
+      ) {
+        <div [className]="{ 'w-full': even, 'w-3/4': odd }">
+          <app-comment-loading-placeholder />
+        </div>
+      }
+    }
+  </div>
+}

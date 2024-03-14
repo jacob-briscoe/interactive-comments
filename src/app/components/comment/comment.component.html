@@ -1,0 +1,64 @@
+<app-comment-container>
+  <div class="grid grid-cols-2 sm:grid-cols-12 grid-flow-row-dense gap-5">
+    <div class="flex flex-col gap-5 col-span-2 sm:col-span-7 sm:order-2">
+      <div class="flex flex-row gap-3 sm:gap-5 items-center">
+        <app-avatar [picture]="user | userPicture" />
+        <h3 class="font-medium text-slate-600 dark:text-current">
+          {{ userName }}
+        </h3>
+        @if (myComment) {
+          <app-badge>you</app-badge>
+        }
+        <app-timestamp [createdAt]="createdAt" />
+      </div>
+    </div>
+    <div class="col-span-2 sm:col-span-11 sm:order-4">
+      @if (isEditing()) {
+        <form [formGroup]="commentForm" (ngSubmit)="onUpdate()">
+          <div class="flex flex-col items-end gap-5">
+            <textarea
+              appTextarea
+              formControlName="comment"
+              placeholder="Edit comment..."
+              rows="5"
+              [value]="commentText"
+            ></textarea>
+            <button appFlatButton type="submit">Update</button>
+          </div>
+        </form>
+      } @else {
+        <p
+          class="text-grayish-blue dark:text-current"
+          [innerHTML]="commentText | highlightMentions"
+        ></p>
+      }
+    </div>
+    <div
+      class="flex items-start sm:items-start sm:justify-center sm:row-span-2 sm:order-1"
+    >
+      <app-up-vote
+        [voteCount]="voteCount"
+        (downVote)="onDownVote()"
+        (upVote)="onUpVote()"
+      />
+    </div>
+    <div class="flex items-center justify-end sm:col-span-4 sm:order-3">
+      @if (myComment) {
+        <div class="flex flex-row gap-7">
+          <button
+            appIconButton
+            color="danger"
+            icon="delete"
+            (click)="onDelete()"
+            class="text-soft-red"
+          >
+            Delete
+          </button>
+          <button appIconButton icon="edit" (click)="onEdit()">Edit</button>
+        </div>
+      } @else {
+        <button appIconButton icon="reply" (click)="onReply()">Reply</button>
+      }
+    </div>
+  </div>
+</app-comment-container>

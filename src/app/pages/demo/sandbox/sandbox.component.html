@@ -1,0 +1,108 @@
+<div class="flex flex-col gap-5 p-3">
+  <div>
+    <h1>Styles and Components</h1>
+  </div>
+  <div>
+    <h2>Colors</h2>
+    <div class="flex flex-row flex-wrap gap-3">
+      <div class="bg-moderate-blue w-24 h-24 text-black">moderate-blue</div>
+      <div class="bg-soft-red w-24 h-24 text-black">soft-red</div>
+      <div class="bg-light-grayish-blue w-24 h-24 text-black">
+        light-grayish-blue
+      </div>
+      <div class="bg-pale-red w-24 h-24 text-black">pale-red</div>
+      <div class="bg-dark-blue w-24 h-24 text-black">dark-blue</div>
+      <div class="bg-grayish-blue w-24 h-24 text-black">grayish-blue</div>
+      <div class="bg-light-gray w-24 h-24 text-black">light-gray</div>
+      <div class="bg-very-light-gray w-24 h-24 text-black">very-light-gray</div>
+    </div>
+  </div>
+  <div>
+    <h2>Buttons</h2>
+    <div class="flex flex-row justify-around">
+      <button appFlatButton>Flat</button>
+      <button appFlatButton color="danger">Danger</button>
+      <button appFlatButton color="secondary">Secondary</button>
+      <button appBasicButton>Basic</button>
+      <button appBasicButton color="danger">Danger</button>
+      <button appBasicButton color="secondary">Secondary</button>
+      <button appIconButton icon="reply">Reply</button>
+      <button appIconButton icon="delete" color="danger">Delete</button>
+    </div>
+  </div>
+  <div>
+    <h2>Upvote</h2>
+    <div class="">
+      <app-up-vote
+        [voteCount]="voteCount"
+        (downVote)="handleDownvote()"
+        (upVote)="handleUpvote()"
+      ></app-up-vote>
+    </div>
+  </div>
+  <div>
+    <h2>Avatars</h2>
+    <div class="flex gap-3 items-center">
+      <app-avatar
+        picture="assets/images/avatars/image-amyrobson.webp"
+      ></app-avatar>
+      <app-avatar
+        size="large"
+        picture="assets/images/avatars/image-amyrobson.webp"
+      ></app-avatar>
+    </div>
+  </div>
+  <div>
+    <h2>Badge</h2>
+    <div class="flex gap-3 items-center">
+      <app-badge>you</app-badge>
+    </div>
+  </div>
+  <div>
+    <h2>Timestamp</h2>
+    <div class="flex gap-3 items-center flex-wrap">
+      <app-timestamp [createdAt]="timestamp1" />
+      <app-timestamp [createdAt]="timestamp2" />
+    </div>
+  </div>
+  <div>
+    <h2>Comment Text</h2>
+    <div [formGroup]="commentsForm" class="flex flex-col gap-3 items-center">
+      <textarea
+        appTextarea
+        formControlName="comment1"
+        placeholder="Add a comment..."
+        rows="5"
+      ></textarea>
+      <div class="w-96">
+        <textarea
+          appTextarea
+          formControlName="comment2"
+          placeholder="Add a comment..."
+          rows="5"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Delete comment Modal</h2>
+    <button appFlatButton (click)="handleOpenDeleteCommentModal()">Open</button>
+  </div>
+  <div>
+    <h2>Comment</h2>
+    <div class="flex flex-col gap-5">
+      <app-comment [comment]="comment" [isEditing]="false"></app-comment>
+      <app-comment
+        [comment]="comment"
+        myComment
+        [isEditing]="false"
+      ></app-comment>
+    </div>
+  </div>
+  <div>
+    <h2>New Comment</h2>
+    <div>
+      <app-new-comment [user]="user"></app-new-comment>
+    </div>
+  </div>
+</div>
