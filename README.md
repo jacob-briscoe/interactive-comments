@@ -28,12 +28,12 @@ Users should be able to:
 - **Bonus**: Instead of using the `createdAt` strings from the `data.json` file, try using timestamps and dynamically track the time since the comment or reply was posted.
 
 ### Screenshot
-![](./docs/images/desktop.png)
+![](./images/desktop.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://jacob-briscoe.github.io/interactive-comments/comments/juliusomo](https://jacob-briscoe.github.io/interactive-comments/comments/juliusomo)
 
 ## My process
 
