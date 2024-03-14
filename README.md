@@ -11,10 +11,8 @@ This is a solution to the [Interactive comments section challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -39,6 +37,10 @@ Users should be able to:
 
 ## My process
 
+I started building this app by creating a sandbox to experiment with the various components needed in the app. I used this as a way to create the styles so that I could
+visually make adjustments to the look and feel. Once I was satisfied with the look and feel, I moved on to individual component behavior. Next, I focused on putting 
+the components together in the main screen of the app. And finally, I created a component store to properly handle reactivity and state.
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -48,55 +50,19 @@ Users should be able to:
 - Mobile-first workflow
 - [Angular](https://angular.dev/) - Front-End Framework
 - [TailwindCSS](https://tailwindcss.com/) - For styles
-- [Angular CDK](https://material.angular.io/cdk/categories) - For Dialog
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+One of the most challenging aspects of this was to calculate relative time for the comments. Initially I considered pulling in a library to handle this for me
+but I wanted the challenge of calculating it myself. In addition, I made the relative time calculation update automatically as well.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Angular Dev](https://angular.dev/) - This is a great site for referencing Angular documentation.
+- [MDN](https://mdn.io) - I referenced this site many times, great for HTML, CSS, and JavaScript.
+- [TypeScript](https://www.typescriptlang.org/) - Typescript documentation.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Jacob Briscoe](https://jacob-briscoe.github.io/)
+- Frontend Mentor - [@jacob-briscoe](https://www.frontendmentor.io/profile/jacob-briscoe)
