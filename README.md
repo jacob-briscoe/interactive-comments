@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/angular-interactive-comments-LVgnKKcPH3](https://www.frontendmentor.io/solutions/angular-interactive-comments-LVgnKKcPH3)
 - Live Site URL: [https://jacob-briscoe.github.io/interactive-comments/](https://jacob-briscoe.github.io/interactive-comments/)
 
 ## My process
