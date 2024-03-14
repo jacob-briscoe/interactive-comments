@@ -28,7 +28,7 @@ Users should be able to:
 - **Bonus**: Instead of using the `createdAt` strings from the `data.json` file, try using timestamps and dynamically track the time since the comment or reply was posted.
 
 ### Screenshot
-![](./docs/images/desktop.png)
+![](./images/desktop.png)
 
 ### Links
 
