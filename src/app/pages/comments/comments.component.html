@@ -50,18 +50,6 @@
         [user]="vm.user"
         (submitComment)="onSubmitComment($event)"
       />
-    } @else {
-      <!-- TODOJ: finish/polish -->
-      @for (
-        item of placeholderComments;
-        track $index;
-        let even = $even;
-        let odd = $odd
-      ) {
-        <div [className]="{ 'w-full': even, 'w-3/4': odd }">
-          <app-comment-loading-placeholder />
-        </div>
-      }
     }
   </div>
 }

@@ -1,15 +1,12 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule } from "@angular/common";
 import {
   ChangeDetectionStrategy,
   Component,
-  DestroyRef,
   inject,
   type OnInit,
-} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { CommentLoadingPlaceholderComponent } from '../../components/comment-loading-placeholder/comment-loading-placeholder.component';
-import { CommentComponent } from '../../components/comment/comment.component';
-import { NewCommentComponent } from '../../components/new-comment/new-comment.component';
+} from "@angular/core";
+import { CommentComponent } from "../../components/comment/comment.component";
+import { NewCommentComponent } from "../../components/new-comment/new-comment.component";
 import {
   EditCommentEvent,
   ReplyToCommentEvent,
@@ -17,30 +14,19 @@ import {
   type DeleteCommentEvent,
   type DeleteReplyCommentEvent,
   type UpdateCommentOrReplyEvent,
-} from '../../model/comment.type';
-import { CommentsStore } from '../../store/comments.store';
-import { UserStore } from '../../store/user.store';
+} from "../../model/comment.type";
+import { CommentsStore } from "../../store/comments.store";
 
 @Component({
-  selector: 'app-comments',
+  selector: "app-comments",
   standalone: true,
-  templateUrl: './comments.component.html',
+  templateUrl: "./comments.component.html",
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [CommentsStore],
-  imports: [
-    CommonModule,
-    CommentComponent,
-    NewCommentComponent,
-    CommentLoadingPlaceholderComponent,
-  ],
+  imports: [CommonModule, CommentComponent, NewCommentComponent],
 })
 export class CommentsComponent implements OnInit {
-  private destroyRef: DestroyRef = inject(DestroyRef);
-  private activatedRoute: ActivatedRoute = inject(ActivatedRoute);
-  private userStore: UserStore = inject(UserStore);
   private commentsStore: CommentsStore = inject(CommentsStore);
-
-  placeholderComments: number[] = Array(5).fill(1);
 
   ngOnInit(): void {}
 
