@@ -10,12 +10,12 @@
             vm.editing.commentId === comment.id &&
             !vm.editing.replyId
           "
-          (upVote)="onUpvote($event)"
-          (downVote)="onDownvote($event)"
-          (reply)="onReplyComment($event)"
           (delete)="onDeleteComment($event)"
-          (update)="onUpdateComment($event)"
+          (downVote)="onDownvote($event)"
           (edit)="onEditComment($event)"
+          (reply)="onReplyComment($event)"
+          (upVote)="onUpvote($event)"
+          (update)="onUpdateComment($event)"
         />
         @if (comment.replies.length) {
           <div class="flex flex-row">
@@ -34,12 +34,12 @@
                     vm.editing.commentId === comment.id &&
                     vm.editing.replyId === reply.id
                   "
-                  (upVote)="onReplyUpvote(comment.id, $event)"
-                  (downVote)="onReplyDownvote(comment.id, $event)"
-                  (update)="onUpdateReplyComment($event)"
-                  (edit)="onEditComment($event)"
                   (deleteReply)="onDeleteReplyComment($event)"
+                  (downVote)="onReplyDownvote(comment.id, $event)"
+                  (edit)="onEditComment($event)"
                   (reply)="onReplyComment($event)"
+                  (upVote)="onReplyUpvote(comment.id, $event)"
+                  (update)="onUpdateReplyComment($event)"
                 />
               }
             </div>
