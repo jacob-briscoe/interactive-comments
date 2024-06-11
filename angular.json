@@ -27,7 +27,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": [],
-            "baseHref": "/interactive-comments"
+            "baseHref": "https://jacob-briscoe.github.io/interactive-comments/"
           },
           "configurations": {
             "production": {
