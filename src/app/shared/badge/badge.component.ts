@@ -3,10 +3,9 @@ import { getColor } from '../../helpers/color.helper';
 import { ThemeColor } from '../../model/theme.type';
 
 @Component({
-  selector: 'app-badge',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'app-badge',
+    imports: [],
+    template: `
     <label
       [class]="[
         backgroundColor,
@@ -20,8 +19,8 @@ import { ThemeColor } from '../../model/theme.type';
       ><ng-content
     /></label>
   `,
-  styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    styles: ``,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BadgeComponent {
   @Input() color: ThemeColor = 'primary';

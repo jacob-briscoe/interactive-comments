@@ -11,7 +11,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { tap } from 'rxjs';
 import { CommentComponent } from '../../../components/comment/comment.component';
 import {
-  DeleteCommentModalComponent,
   openDeleteCommentModal,
 } from '../../../components/delete-comment-modal/delete-comment-modal.component';
 import { NewCommentComponent } from '../../../components/new-comment/new-comment.component';
@@ -22,33 +21,29 @@ import { BadgeComponent } from '../../../shared/badge/badge.component';
 import { BasicButtonDirective } from '../../../shared/buttons/basic-button/basic-button.directive';
 import { FlatButtonDirective } from '../../../shared/buttons/flat-button/flat-button.directive';
 import { IconButtonDirective } from '../../../shared/buttons/icon-button/icon-button.directive';
-import { SVGIconComponent } from '../../../shared/icon/icon.component';
 import { TextareaDirective } from '../../../shared/textarea/textarea.directive';
 import { TimestampComponent } from '../../../shared/timestamp/timestamp.component';
 import { UpVoteComponent } from '../../../shared/up-vote/up-vote.component';
 
 @Component({
-  selector: 'app-sandbox',
-  standalone: true,
-  templateUrl: './sandbox.component.html',
-  styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    UpVoteComponent,
-    FlatButtonDirective,
-    BasicButtonDirective,
-    SVGIconComponent,
-    IconButtonDirective,
-    AvatarComponent,
-    BadgeComponent,
-    TimestampComponent,
-    ReactiveFormsModule,
-    TextareaDirective,
-    DeleteCommentModalComponent,
-    DialogModule,
-    CommentComponent,
-    NewCommentComponent,
-  ],
+    selector: 'app-sandbox',
+    templateUrl: './sandbox.component.html',
+    styles: ``,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        UpVoteComponent,
+        FlatButtonDirective,
+        BasicButtonDirective,
+        IconButtonDirective,
+        AvatarComponent,
+        BadgeComponent,
+        TimestampComponent,
+        ReactiveFormsModule,
+        TextareaDirective,
+        DialogModule,
+        CommentComponent,
+        NewCommentComponent,
+    ]
 })
 export class SandboxComponent {
   voteCount: number = 0;

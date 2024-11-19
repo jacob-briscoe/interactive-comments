@@ -7,11 +7,10 @@ import {
 import { Icon, Icons, ProvidedIcon } from '../../model/icon.type';
 
 @Component({
-  selector: 'app-svg-icon',
-  standalone: true,
-  imports: [],
-  templateUrl: './icon.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-svg-icon',
+    imports: [],
+    templateUrl: './icon.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SVGIconComponent {
   @Input() icon: Icon = Icons.None;

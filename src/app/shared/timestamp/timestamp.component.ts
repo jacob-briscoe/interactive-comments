@@ -11,16 +11,15 @@ import { interval, map } from 'rxjs';
 import { calculateElapsedTime } from '../helpers';
 
 @Component({
-  selector: 'app-timestamp',
-  standalone: true,
-  imports: [CommonModule],
-  template: `<time
+    selector: 'app-timestamp',
+    imports: [CommonModule],
+    template: `<time
     [title]="createdAt() | date: 'medium'"
     [dateTime]="createdAt() | date: 'full'"
     class="text-grayish-blue"
     >{{ $elapsedTime() }}</time
   >`,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TimestampComponent {
   createdAt = input.required<number>();

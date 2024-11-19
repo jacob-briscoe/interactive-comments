@@ -26,19 +26,18 @@ type NewCommentForm = {
 };
 
 @Component({
-  selector: 'app-new-comment',
-  standalone: true,
-  templateUrl: './new-comment.component.html',
-  styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    CommentContainerComponent,
-    AvatarComponent,
-    FlatButtonDirective,
-    TextareaDirective,
-    UserPicturePipe,
-    ReactiveFormsModule,
-  ],
+    selector: 'app-new-comment',
+    templateUrl: './new-comment.component.html',
+    styles: ``,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        CommentContainerComponent,
+        AvatarComponent,
+        FlatButtonDirective,
+        TextareaDirective,
+        UserPicturePipe,
+        ReactiveFormsModule,
+    ]
 })
 export class NewCommentComponent {
   @Input({ required: true }) user!: User;

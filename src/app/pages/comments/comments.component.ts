@@ -18,12 +18,11 @@ import {
 import { CommentsStore } from "../../store/comments.store";
 
 @Component({
-  selector: "app-comments",
-  standalone: true,
-  templateUrl: "./comments.component.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [CommentsStore],
-  imports: [CommonModule, CommentComponent, NewCommentComponent],
+    selector: "app-comments",
+    templateUrl: "./comments.component.html",
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [CommentsStore],
+    imports: [CommonModule, CommentComponent, NewCommentComponent]
 })
 export class CommentsComponent implements OnInit {
   private commentsStore: CommentsStore = inject(CommentsStore);
