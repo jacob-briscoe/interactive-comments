@@ -19,6 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/interactive-comments/",
             "outputPath": "dist/interactive-comments",
             "index": "src/index.html",
             "browser": "src/main.ts",
