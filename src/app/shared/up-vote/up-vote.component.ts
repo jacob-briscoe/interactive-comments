@@ -8,12 +8,11 @@ import {
 import { IconButtonDirective } from '../buttons/icon-button/icon-button.directive';
 
 @Component({
-  selector: 'app-up-vote',
-  standalone: true,
-  templateUrl: './up-vote.component.html',
-  styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [IconButtonDirective],
+    selector: 'app-up-vote',
+    templateUrl: './up-vote.component.html',
+    styles: ``,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [IconButtonDirective]
 })
 export class UpVoteComponent {
   @Input() voteCount: number = 0;

@@ -48,23 +48,22 @@ type CommentForm = {
 };
 
 @Component({
-  selector: 'app-comment',
-  standalone: true,
-  templateUrl: './comment.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    UpVoteComponent,
-    AvatarComponent,
-    TimestampComponent,
-    FlatButtonDirective,
-    IconButtonDirective,
-    CommentContainerComponent,
-    UserPicturePipe,
-    BadgeComponent,
-    HighlightMentionsPipe,
-    TextareaDirective,
-    ReactiveFormsModule,
-  ],
+    selector: 'app-comment',
+    templateUrl: './comment.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        UpVoteComponent,
+        AvatarComponent,
+        TimestampComponent,
+        FlatButtonDirective,
+        IconButtonDirective,
+        CommentContainerComponent,
+        UserPicturePipe,
+        BadgeComponent,
+        HighlightMentionsPipe,
+        TextareaDirective,
+        ReactiveFormsModule,
+    ]
 })
 export class CommentComponent {
   @Input({ required: true }) comment!: Comment | ReplyComment;

@@ -3,11 +3,10 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FlatButtonDirective } from '../../shared/buttons/flat-button/flat-button.directive';
 
 @Component({
-  selector: 'app-delete-comment-modal',
-  standalone: true,
-  imports: [FlatButtonDirective],
-  templateUrl: './delete-comment-modal.component.html',
-  styles: `
+    selector: 'app-delete-comment-modal',
+    imports: [FlatButtonDirective],
+    templateUrl: './delete-comment-modal.component.html',
+    styles: `
      :host {
       display: block;
       background: #fff;
@@ -24,7 +23,7 @@ import { FlatButtonDirective } from '../../shared/buttons/flat-button/flat-butto
       }
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeleteCommentModalComponent {
   dialogRef: DialogRef<boolean, DeleteCommentModalComponent> = inject(
